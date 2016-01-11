@@ -13,3 +13,7 @@ print "There will be", cars_not_driven, "empty cars today."
 print "We can transport", carpool_capacity, "people today."
 print "We have", passengers, "to carpool today."
 print "We need to put about", average_passengers_per_car, "in each car."
+
+# In this exercise we have learn how to declare variable
+# of different type inclding int & float. Also how to concate
+# the strings
