@@ -1,0 +1,3 @@
+I've truncate the file
+Now going to write this content to file
+Done with it. Now closing the file
