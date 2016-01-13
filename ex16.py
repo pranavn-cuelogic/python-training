@@ -29,3 +29,8 @@ target.write("\n")
 
 print "And finally, we close it."
 target.close()
+
+# In this exercise we have learned how to open a file,
+# truncate it, writing a content to it & closing it.
+# There are several commands to do specific operations
+# on a file (open, truncate, write & close).
