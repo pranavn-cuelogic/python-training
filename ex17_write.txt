@@ -1,0 +1,1 @@
+Just like your other scripts, run this one with two arguments: the file to copy from and the file to copy it to. I'm going to use a simple test file named.
