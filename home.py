@@ -1,7 +1,7 @@
 
 import imaplib
 import getpass
-# import re
+import sys
 from email.parser import Parser
 from email.utils import parseaddr
 from validate_email import validate_email
@@ -71,7 +71,7 @@ def loginAndFetchRawData(username, password):
 
     mail_list.close()  # closing the connection for created mail object
     mail_list.logout()  # logging out from the account.
-    exit(1)
+    sys.exit()
 
 
 def processRawData(total_email_count, user_data, folder):
@@ -94,13 +94,13 @@ def displayResult(individual_email_count, total_email_count):
     i = 1
     print '==' * 40
     print "Total no. of emails: ", total_email_count
-    print '{0:40} {1:40} {2:40} {3:10}'.format("==>Name<==", "==>Email<==", "==>Email count<==", "==>No of emails (in percentage)<==")
+    print '{0:40} {1:40} {2:10} {3:10}'.format("==>Name<==", "==>Email<==", "==>Email count<==", "==>No of emails (in percentage)<==")
     for name, count in sorted(individual_email_count.items(), key=lambda (k, v):(v, k))[::-1] :
         if i <= 10:
             percentage = (count / float(total_email_count)) * 100
             user_detail = parseaddr(name)
             if user_detail[0] != '':
-                print '{0:40} {1:40} {2:40} {3:10}'.format(
+                print '{0:40} {1:40} {2:10} {3:10}'.format(
                     user_detail[0], user_detail[1], count, round(percentage, 2)
                 )
 
